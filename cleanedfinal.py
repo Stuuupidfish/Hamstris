@@ -1,9 +1,8 @@
-
 import pygame
 import sys
 import random
-import copy
- 
+
+#import copy
 # import time
 
 pygame.init()
@@ -217,7 +216,8 @@ def grabNewTetromino():
     currentTetromino.updateGrid()
     checkDeleteFullRows(grid)
     
-    collisionGrid = copy.deepcopy(grid)
+    # collisionGrid = copy.deepcopy(grid)
+    collisionGrid = grid
 
     currentTetromino = getNewTetromino()
     currentTetromino.start_x = 3
@@ -326,7 +326,8 @@ while run:
     # for i in range(gridHeight):
     #     grid.append([(0, 0, 0) for _ in range(gridWidth)])
 
-    grid = copy.deepcopy(collisionGrid)
+    # grid = copy.deepcopy(collisionGrid)
+    grid = collisionGrid
     #clears the grid
 
 
